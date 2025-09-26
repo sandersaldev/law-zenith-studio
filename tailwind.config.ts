@@ -47,10 +47,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Premium Law Firm Colors
+        'dark-primary': 'hsl(var(--dark-primary))',
+        'dark-secondary': 'hsl(var(--dark-secondary))',
+        'dark-accent': 'hsl(var(--dark-accent))',
+        'gold-primary': 'hsl(var(--gold-primary))',
+        'gold-accent': 'hsl(var(--gold-accent))',
+        'gold-muted': 'hsl(var(--gold-muted))',
+        'white-pure': 'hsl(var(--white-pure))',
+        'white-soft': 'hsl(var(--white-soft))',
+        'gray-light': 'hsl(var(--gray-light))',
+        'gray-medium': 'hsl(var(--gray-medium))',
+        'gray-dark': 'hsl(var(--gray-dark))',
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
+          primary: "hls(var(--sidebar-primary))",
           "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
           accent: "hsl(var(--sidebar-accent))",
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
@@ -58,10 +70,26 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        'display': ['Playfair Display', 'serif'],
+        'body': ['Roboto', 'sans-serif'],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-gold': 'var(--gradient-gold)',
+        'gradient-dark': 'var(--gradient-dark)',
+        'gradient-card': 'var(--gradient-card)',
+      },
+      boxShadow: {
+        'gold': 'var(--shadow-gold)',
+        'dark': 'var(--shadow-dark)',
+        'elegant': 'var(--shadow-elegant)',
+        'card': 'var(--shadow-card)',
       },
       keyframes: {
         "accordion-down": {
