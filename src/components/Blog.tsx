@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
   const blogPosts = [
@@ -92,16 +93,25 @@ const Blog = () => {
                 </p>
 
                 {/* Read More Button */}
-                <Button variant="outline-premium">
-                  Leia Mais
-                  <i className="fas fa-arrow-right ml-2"></i>
-                </Button>
+                <Link to={`/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}>
+                  <Button variant="outline-premium">
+                    Leia Mais
+                    <i className="fas fa-arrow-right ml-2"></i>
+                  </Button>
+                </Link>
               </div>
             </article>
           ))}
         </div>
 
-        {/* Newsletter Signup */}
+        <div className="text-center mt-12">
+          <Link to="/blog">
+            <Button variant="outline-premium">
+              <i className="fas fa-plus mr-2"></i>
+              Ver Todos os Artigos
+            </Button>
+          </Link>
+        </div>
         <div className="mt-16 fade-in-up">
           <div className="bg-gradient-dark rounded-lg p-8 md:p-12 text-center">
             <div className="max-w-2xl mx-auto">

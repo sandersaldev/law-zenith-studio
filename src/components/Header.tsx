@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -20,6 +21,7 @@ const Header = () => {
     { label: 'Áreas de Atuação', href: '#services' },
     { label: 'Equipe', href: '#team' },
     { label: 'Depoimentos', href: '#testimonials' },
+    { label: 'Blog', href: '/blog', isExternal: true },
     { label: 'Contato', href: '#contact' },
   ];
 
@@ -43,13 +45,23 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-white-pure hover:text-gold-primary transition-colors duration-300 font-body font-medium gold-underline"
-              >
-                {item.label}
-              </a>
+              item.isExternal ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-white-pure hover:text-gold-primary transition-colors duration-300 font-body font-medium gold-underline"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="text-white-pure hover:text-gold-primary transition-colors duration-300 font-body font-medium gold-underline"
+                >
+                  {item.label}
+                </a>
+              )
             ))}
           </nav>
 
@@ -85,14 +97,25 @@ const Header = () => {
           <div className="lg:hidden mt-4 pb-4 border-t border-gold-primary/20">
             <nav className="flex flex-col space-y-4 mt-4">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-white-pure hover:text-gold-primary transition-colors duration-300 font-body font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+                item.isExternal ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className="text-white-pure hover:text-gold-primary transition-colors duration-300 font-body font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="text-white-pure hover:text-gold-primary transition-colors duration-300 font-body font-medium"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                )
               ))}
               <Button variant="premium" className="mt-4 w-full">
                 Agendar Consulta
