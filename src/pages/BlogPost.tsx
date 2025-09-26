@@ -8,6 +8,33 @@ const BlogPost = () => {
 
   // Mock data - in a real app this would come from an API
   const blogPosts = {
+    'inteligencia-artificial-direito': {
+      title: 'Inteligência Artificial e Direito: Desafios jurídicos da era digital',
+      content: `
+        <p>A inteligência artificial (IA) está revolucionando diversos setores da economia, e o direito não fica de fora dessa transformação. Com o avanço das tecnologias de machine learning e deep learning, surgem novos desafios jurídicos que demandam uma regulamentação específica.</p>
+        
+        <h3>Principais Desafios Jurídicos</h3>
+        <p>Um dos maiores desafios é determinar a responsabilidade civil quando sistemas de IA causam danos. Quem é responsável: o desenvolvedor, o proprietário do sistema ou o usuário? A legislação atual ainda não oferece respostas claras para essas questões.</p>
+        
+        <h3>Regulamentação no Brasil</h3>
+        <p>O Brasil está desenvolvendo um marco regulatório para IA, seguindo tendências internacionais como o AI Act da União Europeia. O projeto de lei em tramitação no Congresso Nacional busca equilibrar inovação com proteção de direitos fundamentais.</p>
+        
+        <h3>Impactos na Advocacia</h3>
+        <p>A IA também está transformando a prática jurídica. Ferramentas de análise de jurisprudência, elaboração de petições e pesquisa legal automatizada já são realidade em muitos escritórios. No entanto, é crucial manter a supervisão humana e a responsabilidade profissional.</p>
+        
+        <h3>Proteção de Dados e IA</h3>
+        <p>A integração entre LGPD e sistemas de IA apresenta complexidades adicionais. Algoritmos de machine learning processam grandes volumes de dados pessoais, exigindo medidas especiais de proteção e transparência nos processos decisórios automatizados.</p>
+        
+        <h3>Perspectivas Futuras</h3>
+        <p>O futuro do direito digital dependerá da capacidade de criar regulamentações que fomentem a inovação sem comprometer direitos fundamentais. A colaboração entre juristas, tecnólogos e reguladores será essencial para enfrentar esses desafios.</p>
+      `,
+      date: '20 de Março, 2024',
+      category: 'Direito Digital',
+      readTime: '8 min',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop&crop=center',
+      author: 'Dra. Patricia Moreira',
+      authorImage: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=center'
+    },
     'nova-lei-protecao-dados': {
       title: 'Nova Lei de Proteção de Dados: O que sua empresa precisa saber',
       content: `

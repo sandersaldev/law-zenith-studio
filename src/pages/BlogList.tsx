@@ -9,6 +9,16 @@ const BlogList = () => {
 
   const blogPosts = [
     {
+      slug: 'inteligencia-artificial-direito',
+      title: 'Inteligência Artificial e Direito: Desafios jurídicos da era digital',
+      excerpt: 'Explore os principais desafios jurídicos da IA e como a regulamentação está evoluindo no Brasil e no mundo.',
+      date: '20 de Março, 2024',
+      category: 'Direito Digital',
+      readTime: '8 min',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop&crop=center',
+      author: 'Dra. Patricia Moreira'
+    },
+    {
       slug: 'nova-lei-protecao-dados',
       title: 'Nova Lei de Proteção de Dados: O que sua empresa precisa saber',
       excerpt: 'Entenda as principais mudanças na legislação de proteção de dados e como adequar sua empresa às novas normas.',

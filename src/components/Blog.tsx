@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 const Blog = () => {
   const blogPosts = [
     {
+      title: 'Inteligência Artificial e Direito: Desafios jurídicos da era digital',
+      excerpt: 'Explore os principais desafios jurídicos da IA e como a regulamentação está evoluindo no Brasil e no mundo.',
+      date: '20 de Março, 2024',
+      category: 'Direito Digital',
+      readTime: '8 min',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop&crop=center'
+    },
+    {
       title: 'Nova Lei de Proteção de Dados: O que sua empresa precisa saber',
       excerpt: 'Entenda as principais mudanças na legislação de proteção de dados e como adequar sua empresa às novas normas.',
       date: '15 de Março, 2024',
@@ -93,7 +101,7 @@ const Blog = () => {
                 </p>
 
                 {/* Read More Button */}
-                <Link to={`/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}>
+                <Link to={`/blog/${index === 0 ? 'inteligencia-artificial-direito' : post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}>
                   <Button variant="outline-premium">
                     Leia Mais
                     <i className="fas fa-arrow-right ml-2"></i>
