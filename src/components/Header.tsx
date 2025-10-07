@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  
+  // Check if we're on a page with white background
+  const isWhiteBackground = location.pathname.startsWith('/blog');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,9 +29,15 @@ const Header = () => {
     { label: 'Contato', href: '#contact' },
   ];
 
+  // Determine text colors based on background
+  const textColor = (isWhiteBackground || isScrolled) ? 'text-dark-primary' : 'text-white-pure';
+  const hoverColor = 'hover:text-gold-primary';
+  const logoTextColor = (isWhiteBackground || isScrolled) ? 'text-dark-primary' : 'text-white-pure';
+  const iconColor = (isWhiteBackground || isScrolled) ? 'text-dark-primary' : 'text-white-pure';
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-dark-primary/95 backdrop-blur-md shadow-dark' : 'bg-transparent'
+      isScrolled || isWhiteBackground ? 'bg-white-pure shadow-elegant' : 'bg-dark-primary/50 backdrop-blur-md'
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -37,7 +47,7 @@ const Header = () => {
               <i className="fas fa-balance-scale text-dark-primary text-xl"></i>
             </div>
             <div>
-              <h1 className="font-display text-2xl font-bold text-white-pure">Advocacia</h1>
+              <h1 className={`font-display text-2xl font-bold ${logoTextColor}`}>Advocacia</h1>
               <p className="text-gold-primary text-sm">Premium</p>
             </div>
           </div>
@@ -49,7 +59,7 @@ const Header = () => {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className="text-white-pure hover:text-gold-primary transition-colors duration-300 font-body font-medium gold-underline"
+                  className={`${textColor} ${hoverColor} transition-colors duration-300 font-body font-medium gold-underline`}
                 >
                   {item.label}
                 </Link>
@@ -57,7 +67,7 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-white-pure hover:text-gold-primary transition-colors duration-300 font-body font-medium gold-underline"
+                  className={`${textColor} ${hoverColor} transition-colors duration-300 font-body font-medium gold-underline`}
                 >
                   {item.label}
                 </a>
@@ -68,13 +78,13 @@ const Header = () => {
           {/* Social Icons & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex space-x-3">
-              <a href="#" className="text-white-pure hover:text-gold-primary transition-colors duration-300">
+              <a href="#" className={`${iconColor} ${hoverColor} transition-colors duration-300`}>
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" className="text-white-pure hover:text-gold-primary transition-colors duration-300">
+              <a href="#" className={`${iconColor} ${hoverColor} transition-colors duration-300`}>
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" className="text-white-pure hover:text-gold-primary transition-colors duration-300">
+              <a href="#" className={`${iconColor} ${hoverColor} transition-colors duration-300`}>
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -85,7 +95,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white-pure"
+            className={`lg:hidden ${iconColor}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
@@ -101,7 +111,7 @@ const Header = () => {
                   <Link
                     key={item.label}
                     to={item.href}
-                    className="text-white-pure hover:text-gold-primary transition-colors duration-300 font-body font-medium"
+                    className={`${textColor} ${hoverColor} transition-colors duration-300 font-body font-medium`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -110,7 +120,7 @@ const Header = () => {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="text-white-pure hover:text-gold-primary transition-colors duration-300 font-body font-medium"
+                    className={`${textColor} ${hoverColor} transition-colors duration-300 font-body font-medium`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
