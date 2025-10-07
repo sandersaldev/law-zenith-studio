@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/NOME_DO_REPOSITORIO/',  // 👈 coloque o nome EXATO do repo aqui!
+  base: '/advocacia1/',  // 👈 coloque o nome EXATO do repo aqui!
 })
 
