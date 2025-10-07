@@ -8,6 +8,7 @@ const BlogList = () => {
   const [selectedCategory, setSelectedCategory] = useState('Todos');
 
   const blogPosts = [
+    // Direito Digital
     {
       slug: 'inteligencia-artificial-direito',
       title: 'Inteligência Artificial e Direito: Desafios jurídicos da era digital',
@@ -29,6 +30,28 @@ const BlogList = () => {
       author: 'Dr. João Silva'
     },
     {
+      slug: 'crimes-ciberneticos',
+      title: 'Crimes Cibernéticos: Como se proteger no mundo digital',
+      excerpt: 'Entenda os principais crimes digitais e como empresas podem se proteger legalmente.',
+      date: '20 de Fevereiro, 2024',
+      category: 'Direito Digital',
+      readTime: '5 min',
+      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=250&fit=crop&crop=center',
+      author: 'Dr. João Silva'
+    },
+    {
+      slug: 'lgpd-compliance-empresas',
+      title: 'LGPD: Guia completo de compliance para empresas',
+      excerpt: 'Um guia prático para garantir que sua empresa esteja em conformidade com a Lei Geral de Proteção de Dados.',
+      date: '10 de Fevereiro, 2024',
+      category: 'Direito Digital',
+      readTime: '9 min',
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=250&fit=crop&crop=center',
+      author: 'Dra. Patricia Moreira'
+    },
+    
+    // Direito Trabalhista
+    {
       slug: 'direitos-trabalhistas-2024',
       title: 'Direitos Trabalhistas: Principais mudanças em 2024',
       excerpt: 'Conheça as alterações na legislação trabalhista que podem impactar sua empresa e seus funcionários.',
@@ -38,6 +61,28 @@ const BlogList = () => {
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop&crop=center',
       author: 'Dra. Maria Santos'
     },
+    {
+      slug: 'home-office-direitos',
+      title: 'Home Office: Direitos e deveres de empregadores e empregados',
+      excerpt: 'Tudo o que você precisa saber sobre a legislação do trabalho remoto no Brasil.',
+      date: '28 de Fevereiro, 2024',
+      category: 'Direito Trabalhista',
+      readTime: '6 min',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop&crop=center',
+      author: 'Dra. Maria Santos'
+    },
+    {
+      slug: 'assedio-moral-trabalho',
+      title: 'Assédio Moral no Trabalho: Como identificar e combater',
+      excerpt: 'Entenda o que caracteriza assédio moral no ambiente de trabalho e as medidas legais cabíveis.',
+      date: '15 de Fevereiro, 2024',
+      category: 'Direito Trabalhista',
+      readTime: '7 min',
+      image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=250&fit=crop&crop=center',
+      author: 'Dr. Carlos Oliveira'
+    },
+    
+    // Direito Civil
     {
       slug: 'planejamento-sucessorio',
       title: 'Planejamento Sucessório: Protegendo o patrimônio familiar',
@@ -49,6 +94,28 @@ const BlogList = () => {
       author: 'Dr. Carlos Oliveira'
     },
     {
+      slug: 'divorcio-partilha-bens',
+      title: 'Divórcio e Partilha de Bens: O que você precisa saber',
+      excerpt: 'Entenda os diferentes tipos de divórcio e como funciona a partilha de bens no processo.',
+      date: '22 de Fevereiro, 2024',
+      category: 'Direito Civil',
+      readTime: '8 min',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=250&fit=crop&crop=center',
+      author: 'Dra. Ana Costa'
+    },
+    {
+      slug: 'uniao-estavel-direitos',
+      title: 'União Estável: Direitos e deveres dos companheiros',
+      excerpt: 'Conheça os direitos e obrigações legais que surgem com a união estável.',
+      date: '8 de Fevereiro, 2024',
+      category: 'Direito Civil',
+      readTime: '5 min',
+      image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=250&fit=crop&crop=center',
+      author: 'Dr. Carlos Oliveira'
+    },
+    
+    // Direito Empresarial
+    {
       slug: 'recuperacao-judicial',
       title: 'Recuperação Judicial: Como salvar sua empresa da falência',
       excerpt: 'Entenda quando e como utilizar a recuperação judicial como ferramenta de reestruturação empresarial.',
@@ -58,6 +125,28 @@ const BlogList = () => {
       image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=250&fit=crop&crop=center',
       author: 'Dra. Ana Costa'
     },
+    {
+      slug: 'abertura-empresa-2024',
+      title: 'Abertura de Empresa em 2024: Guia completo',
+      excerpt: 'Passo a passo para abrir sua empresa de forma legal e eficiente, incluindo escolha de regime tributário.',
+      date: '18 de Fevereiro, 2024',
+      category: 'Direito Empresarial',
+      readTime: '10 min',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop&crop=center',
+      author: 'Dr. Pedro Lima'
+    },
+    {
+      slug: 'contratos-empresariais',
+      title: 'Contratos Empresariais: Cláusulas essenciais para proteger seu negócio',
+      excerpt: 'Descubra as cláusulas que não podem faltar nos seus contratos comerciais.',
+      date: '5 de Fevereiro, 2024',
+      category: 'Direito Empresarial',
+      readTime: '7 min',
+      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=250&fit=crop&crop=center',
+      author: 'Dra. Ana Costa'
+    },
+    
+    // Direito Imobiliário
     {
       slug: 'direito-imobiliario-2024',
       title: 'Direito Imobiliário: Novas regulamentações em 2024',
@@ -69,14 +158,56 @@ const BlogList = () => {
       author: 'Dr. Pedro Lima'
     },
     {
-      slug: 'crimes-ciberneticos',
-      title: 'Crimes Cibernéticos: Como se proteger no mundo digital',
-      excerpt: 'Entenda os principais crimes digitais e como empresas podem se proteger legalmente.',
-      date: '20 de Fevereiro, 2024',
+      slug: 'compra-venda-imoveis',
+      title: 'Compra e Venda de Imóveis: Cuidados essenciais',
+      excerpt: 'Evite problemas na compra ou venda do seu imóvel conhecendo os principais pontos de atenção.',
+      date: '12 de Fevereiro, 2024',
+      category: 'Direito Imobiliário',
+      readTime: '8 min',
+      image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=400&h=250&fit=crop&crop=center',
+      author: 'Dr. Pedro Lima'
+    },
+    {
+      slug: 'locacao-comercial',
+      title: 'Locação Comercial: Direitos e deveres de locadores e locatários',
+      excerpt: 'Entenda as particularidades dos contratos de locação comercial e como proteger seus interesses.',
+      date: '30 de Janeiro, 2024',
+      category: 'Direito Imobiliário',
+      readTime: '6 min',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=250&fit=crop&crop=center',
+      author: 'Dra. Patricia Moreira'
+    },
+    
+    // Direito Penal
+    {
+      slug: 'crimes-contra-honra',
+      title: 'Crimes Contra a Honra: Calúnia, difamação e injúria',
+      excerpt: 'Entenda as diferenças entre os crimes contra a honra e como se defender ou processar.',
+      date: '14 de Fevereiro, 2024',
       category: 'Direito Penal',
-      readTime: '5 min',
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=250&fit=crop&crop=center',
+      readTime: '6 min',
+      image: 'https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=400&h=250&fit=crop&crop=center',
       author: 'Dr. João Silva'
+    },
+    {
+      slug: 'direito-defesa-criminal',
+      title: 'Direito de Defesa: O que fazer se for acusado de um crime',
+      excerpt: 'Conheça seus direitos e saiba como agir caso seja acusado criminalmente.',
+      date: '3 de Fevereiro, 2024',
+      category: 'Direito Penal',
+      readTime: '7 min',
+      image: 'https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?w=400&h=250&fit=crop&crop=center',
+      author: 'Dra. Maria Santos'
+    },
+    {
+      slug: 'violencia-domestica',
+      title: 'Violência Doméstica: Lei Maria da Penha e proteção às vítimas',
+      excerpt: 'Entenda os mecanismos legais de proteção e como denunciar casos de violência doméstica.',
+      date: '25 de Janeiro, 2024',
+      category: 'Direito Penal',
+      readTime: '8 min',
+      image: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=400&h=250&fit=crop&crop=center',
+      author: 'Dra. Maria Santos'
     }
   ];
 
